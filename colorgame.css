@@ -1,0 +1,31 @@
+body{
+	background: #232323;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif; 
+}
+.square{
+	width: 30%;
+	background: purple;
+	padding-bottom:30%;
+	float: left;
+	margin:1.66%;
+}
+#container{
+	margin:0 auto;
+	max-width: 600px;
+}
+h1{
+	color: white;
+	text-align: center;
+	background: steelblue;
+	margin: 0;
+}
+#stripe{
+	background: white;
+	height:30px;
+	text-align: center;
+	color: black;
+}
+.selected{
+	background: blue;
+}
