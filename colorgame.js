@@ -8,6 +8,7 @@ var h1=document.querySelector("h1");
 var resetButton=document.querySelector("#reset");
 var easyBtn=document.querySelector("#easyBtn");
 var hardBtn=document.querySelector("#hardBtn");
+var foot=document.querySelector(".footer");
 
 easyBtn.addEventListener("click",function(){
 	hardBtn.classList.remove("selected");
@@ -21,11 +22,11 @@ easyBtn.addEventListener("click",function(){
 		if(colors[i]){
 			squares[i].style.backgroundColor=colors[i];
 		}
-		else
-		{
+		else{
 			squares[i].style.display="none";
 		}
 	}
+	messageDisplay.textContent="";
 });
 hardBtn.addEventListener("click",function(){
 	hardBtn.classList.add("selected");
@@ -39,6 +40,7 @@ hardBtn.addEventListener("click",function(){
 		squares[i].style.backgroundColor=colors[i];
 		squares[i].style.display="block";
 	}
+	messageDisplay.textContent="";
 });
 
 resetButton.addEventListener("click",function(){
@@ -53,6 +55,9 @@ resetButton.addEventListener("click",function(){
 		squares[i].style.backgroundColor=colors[i];
 	}
 	h1.style.backgroundColor="steelblue";
+	foot.style.backgroundColor="steelblue";
+	messageDisplay.textContent="";
+	this.textContent="New Colors";
 });
 
 colorDisplay.textContent=pickedColor;
@@ -72,9 +77,9 @@ for(var i=0;i<squares.length;i++)
 			resetButton.textContent="Play Again?";
 			changeColors(clickedColor);
 			h1.style.backgroundColor=clickedColor;
+			foot.style.backgroundColor=clickedColor;
 		}
-		else
-		{
+		else{
 			this.style.backgroundColor="#232323";
 			messageDisplay.textContent="Try Again";
 		}
